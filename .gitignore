@@ -3,4 +3,4 @@
 /.idea/
 # Datasource local storage ignored files
 /cmake-build-debug/
-
+/notebooks/

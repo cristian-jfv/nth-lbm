@@ -5,11 +5,14 @@
 
 namespace d2q9
 {
-    using torch::Tensor;
     // Lattice velocities
-    extern const Tensor E;
+    extern const torch::Tensor E;
     // Lattice weights
-    extern const Tensor W;
+    extern const torch::Tensor W;
+    const double ics2 = 3.0;
+    const double cs2 = 1.0/3.0;
+    const double ics4 = 9.0;
+    const double cs4 = 1.0/9.0;
 }
 
 #endif //NTH_LBM_D2Q9_HPP

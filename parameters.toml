@@ -1,0 +1,52 @@
+[domain]
+characteristic_length = 2 # m
+lattice_speed = 0.03
+rows = 256
+columns = 256
+G = 2
+A = 6
+Gd = 6
+time_steps = 1000
+nr_snapshots = 1000
+file_prefix = "case-A-"
+
+[neutron-transport]
+# Total cross section
+t1 = 0.2584    # cm-1
+t2 = 0.2899    # cm-1
+# Inscattering cross section
+s11 = 0.2231   # cm-1
+s12 = 1.62E-3  # cm-1
+s21 = 3.68E-4  # cm-1
+s22 = 0.2546   # cm-1
+# Fission crosssection
+nuf1 = 6.0E-3  # cm-1
+nuf2 = 4.43E-3 # cm-1
+# Average number of neutrons emitted per fission
+avg_emi_n = 2.4 # fission-1
+
+[delayed-precursors]
+l1 = 1.258E-2 # s-1
+l2 = 3.364E-2 # s-1
+l3 = 1.367E-1 # s-1
+l4 = 3.227E-1 # s-1
+l5 = 1.14     # s-1
+l6 = 2.6      # s-1
+
+b1 = 2.261E-4
+b2 = 8.142E-4
+b3 = 7.077E-4
+b4 = 9.029E-4
+b5 = 2.002E-4
+b6 = 1.060E-4
+
+[fluid-flow]
+rho = 2000 # kg m-3
+kinematic_viscosity = 2.5E-2 # m2 s-1
+u = 0.5    # m s-1
+Cs = 0.1   # Smagorinsky constant
+
+[heat-transfer]
+Pr = 3.075 # (kinematic_viscosity / thermal_diffusivity)
+rho_Cp = 6.15E6  # J m-3 K-1 (density x specific heat)
+beta_th = 2.0E-4 # K-1
